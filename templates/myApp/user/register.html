@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<title>晨曦微光个人博客</title>
+<style>
+.header {
+  padding: 30px;
+  text-align: center;
+  background: green;
+}
+.button{
+  background-color: #4CAF50;
+  border: none;
+  color: white;
+  padding: 16px 32px;
+  text-decoration: none;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+</style>
+<body>
+<div class="header">
+    <h1 style="text-align: center">注册页面</h1>
+</div>
+<div style="margin: 15% 40%;">
+
+    <form method="post" enctype="multipart/form-data" action="/register/">
+        {% csrf_token %}
+        用户名: <input type="text" name="name"><br>
+        用户邮箱: <input type="text" name="email"><br>
+        用户密码: <input type="text" name="password"><br>
+        确认密码: <input type="text" name="passwordsure"><br>
+        用户头像: <input type="file" name="icon"><br>
+        <div style="text-align: center"><button type="submit" class="button" >注册</button></div>
+
+    </form>
+</div>
+</body>
+</html>
